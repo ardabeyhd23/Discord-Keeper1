@@ -2,7 +2,7 @@ name: Keep Alive
 
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '* * * * *'
 
 jobs:
   ping:
@@ -10,3 +10,4 @@ jobs:
     steps:
       - name: Ping Render
         run: curl https://discord-keeper1.onrender.com
+
