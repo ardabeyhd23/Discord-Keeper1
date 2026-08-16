@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: frarda-bot
+    runtime: node
+    buildCommand: corepack enable && pnpm install --no-frozen-lockfile && pnpm run build
+    startCommand: pnpm --filter @workspace/api-server run start
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: "10000"
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: meta-llama/llama-4-scout-17b-16e-instruct
+      - key: FRARDA_USER_ID
+        sync: false
+      - key: FRARDA_OWNER_ID
+        sync: false
