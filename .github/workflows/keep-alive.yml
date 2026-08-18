@@ -14,10 +14,12 @@ jobs:
         run: |
           for i in 1 2 3; do
             echo "Ping denemesi: $i"
-            if curl -f -L --max-time 30 https://discord-keeper1.onrender.com; then
-              echo "Site cevap verdi."
+
+            if curl -f -L --max-time 30 https://discord-keeper1.onrender.com/health; then
+              echo "Health endpoint başarılı."
               exit 0
             fi
+
             echo "Cevap alınamadı, 10 saniye sonra tekrar denenecek..."
             sleep 10
           done
