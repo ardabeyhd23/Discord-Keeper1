@@ -1,0 +1,1 @@
+{"name":"fr-family-shop-app","version":"1.0.0","private":true,"scripts":{"build":"vite build"},"dependencies":{"@discord/embedded-app-sdk":"latest","vite":"latest","typescript":"latest","react":"latest","react-dom":"latest"}}
