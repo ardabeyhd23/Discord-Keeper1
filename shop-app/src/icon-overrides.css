@@ -1,0 +1,45 @@
+.product-icon {
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 18px #ffffff08;
+}
+.product-icon::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  transform: rotate(45deg);
+  background: linear-gradient(135deg, #b98aff, #6335d6);
+  box-shadow: 0 0 18px #8d5cff88;
+}
+.product-icon i {
+  position: relative;
+  z-index: 1;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 1px 4px #0008;
+}
+.icon-crown-gold::before { background: linear-gradient(135deg, #ffe28a, #ce761d); }
+.icon-crown-gold i::after,
+.icon-crown-purple i::after { content: "♛"; font-size: 22px; }
+.icon-crown-gold i,
+.icon-crown-purple i { font-size: 0; }
+.icon-diamond-blue::before {
+  background: linear-gradient(135deg, #7feaff, #2366d7);
+  clip-path: polygon(50% 0, 100% 38%, 78% 100%, 22% 100%, 0 38%);
+  transform: none;
+}
+.icon-bolt-violet::before {
+  background: linear-gradient(135deg, #ee8cff, #6a2bda);
+  clip-path: polygon(58% 0, 10% 56%, 46% 55%, 32% 100%, 91% 35%, 56% 36%);
+  transform: none;
+}
+.icon-role-pink::before { background: linear-gradient(135deg, #ff9bd4, #b32f9b); }
+.icon-nitro-blue::before { background: linear-gradient(135deg, #8dbbff, #4546db); border-radius: 50%; transform: none; }
+.icon-robux-red::before { background: linear-gradient(135deg, #ff7e91, #b3123d); border-radius: 50%; transform: none; }
+.icon-robux-gold::before { background: linear-gradient(135deg, #ffe48a, #bd6c18); border-radius: 50%; transform: none; }
+.icon-robux-red i,
+.icon-robux-gold i { font-size: 11px; }
